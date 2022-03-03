@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <title> Exercício Avaliativo L5 </title> 
+  <link rel="stylesheet" href="formata-formulario.css">
+</head> 
+
+<body> 
+ <h1> Atividade Avaliativa L5 - Exercício 05 </h1>
+
+ <form action="atividade05.php" method="post">
+  <fieldset>
+   <legend> Registro de Projetos </legend>
+
+   <label class="alinha"> Data de início: </label>
+   <input type="date" name="data" class="form-control"> <br>
+
+   <label class="alinha"> ID do Projeto </label>
+   <input type="text" name="id"> <br>
+
+   <label class="alinha"> Forneça o orçamento em R$: </label>
+   <input type="number" name="orcamento" min="0" step="0.01"> <br>
+
+   <label class="alinha"> Horas necessárias para a execução: </label>
+   <input type="number" name="horas" min="0"> <br>
+
+   <button type="submit" name="registro"> Registrar Projeto </button>
+    
+  </fieldset>
+
+  <fieldset>
+   <legend> Outras operações </legend>
+
+   <input type="radio" name="operacao" value="1"> Mostrar o ID e o orçamento de cada projeto cadastrado <br>
+   <input type="radio" name="operacao" value="2"> Quantidade de projetos  com data de início posterior a 01/01/2020<br>
+   <input type="radio" name="operacao" value="3"> Excluir registros com menos de 100 horas, e com orçamento inferior a R$1000,00 <br>
+
+   <button name="executar-operacao"> Executar operação selecionada </button>
+  </fieldset>
+ </form>    
+</body> 
+</html> 
